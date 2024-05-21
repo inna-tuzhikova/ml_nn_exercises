@@ -1,0 +1,8 @@
+submission_0_0.16211.csv - no prep, LinearSVC(), 90k train
+submission_1_0.46106.csv - HOG, LinearSVC(), 90k train
+submission_2_0.47194.csv - HOG, LinearSVC(C=3, max_iter=5000), 90k train
+submission_3_0.72117.csv - AUG (shift, flip, rotation 30 degrees) + CNN: 3x CABCABMD (32->64->128 filters) + Flatten + Dense(n_classes), 150 epochs, rmsprop(1e-3), lr_scheduler (1e-3, 5e-4, 3e-4), 60k train
+submission_3_0.71511.csv - AUG (shift, flip, rotation 30 degrees) + CNN: 3x CABCABMD (32->64->128 filters) + Flatten + Dense(n_classes), 150 epochs, rmsprop(1e-3), lr_scheduler (1e-3, 5e-4, 3e-4), 90k train
+submission_4_0.71500.csv - AUG (shift, flip, rotation 30 degrees) + CNN: 4x CABCABMD (32->64->128->256 filters) + Flatten + Dense(256, 128, n_classes), 150 epochs, rmsprop(1e-3), lr_scheduler (1e-3, 5e-4, 3e-4), 90k train
+submission_4_0.66650.csv - AUG (shift, flip, rotation 30 degrees) + CNN: 4x CABCABMD (32->64->128->256 filters) + Flatten + Dense(512, 256, 128, n_classes), 300 epochs, rmsprop(1e-3), decay 1e-3->0, 40k train
+submission_5_0.70994.csv - [:,:,:,::-1], AUG (shift, flip, zoom, rotation 40 degrees) + CNN: 4x CABCABMD (32->64->128->256 filters, l2(1e-4)) + Flatten + Dense(512, 256, 128, n_classes), 300 epochs, rmsprop(1e-3), lr_scheduler (1e-3, 5e-4, 3e-4, 2e-4, 1e-4, 5e-5), 90k train
